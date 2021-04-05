@@ -18,7 +18,8 @@ MonoBehaviour:
     m_Position: {x: 0, y: 0, z: 0}
     m_Size: {x: 8, y: 8, z: 1}
   gemMoveTime: 0.25
-  MoveCurve:
+  gemRotationSpeed: 80
+  moveCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3

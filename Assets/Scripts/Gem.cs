@@ -21,6 +21,7 @@ public class Gem : MonoBehaviour
     private GemType _gemType;
     private bool _isMatched;
     private bool _isSelected;
+    private bool _allowRotation;
     private SpriteRenderer _spriteRenderer;
     private bool _isInit;
     private GameDataScriptableObject _gameData;
@@ -98,7 +99,6 @@ public class Gem : MonoBehaviour
         }
         else
         {
-            StopCoroutine(IEnumRotate());
             transform.rotation = Quaternion.identity;
         }
         
@@ -167,7 +167,7 @@ public class Gem : MonoBehaviour
     {
         _isMoving = true;
 
-        var moveCurve = _gameData.MoveCurve;
+        var moveCurve = _gameData.moveCurve;
 
         bool reached = false;//transform.position == _nextPos;
 
@@ -216,24 +216,11 @@ public class Gem : MonoBehaviour
     //-----------------------------------------------------------------------------------------------------------
     private void Rotate()
     {
-
-        StartCoroutine(IEnumRotate());
+        var speed = _gameData.gemRotationSpeed * Time.deltaTime;
+        transform.Rotate(Vector3.forward,speed);
     }
-
     //-----------------------------------------------------------------------------------------------------------
-    private IEnumerator IEnumRotate()
-    {
-
-        while (_isSelected)
-        {
-            var speed = _gameData.gemMoveTime * Time.deltaTime;
-            transform.Rotate(Vector3.forward,speed);
-            yield return null;
-        }
-        
-    }
     
-    //-----------------------------------------------------------------------------------------------------------
     public void DestroyGem()
     {
         StartCoroutine(IEnumDestroyGem());

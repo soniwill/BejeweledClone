@@ -14,7 +14,8 @@ public class GameDataScriptableObject : ScriptableObject
     public TileBase oddTile;
     public BoundsInt boardSize;
     public float gemMoveTime;
-    public AnimationCurve MoveCurve;
+    public float gemRotationSpeed;
+    public AnimationCurve moveCurve;
     public int gemsStartHeight;
 
     [Header("Gems Sprite Settings")]
