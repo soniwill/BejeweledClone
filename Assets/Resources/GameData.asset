@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd95fadd6c2bcd74cba96e84cf1e3ebf, type: 3}
+  m_Name: GameData
+  m_EditorClassIdentifier: 
+  evenTile: {fileID: 11400000, guid: cfcd67eb3781a8a4aa373ed1376f00f7, type: 2}
+  oddTile: {fileID: 11400000, guid: bae6b8df45545264fa940cf23536054b, type: 2}
+  boardSize:
+    m_Position: {x: 0, y: 0, z: 0}
+    m_Size: {x: 8, y: 8, z: 1}
+  gemMoveTime: 0.25
+  MoveCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  gemsStartHeight: 20
+  gemSprite: {fileID: 21300000, guid: 32894f12e8b241547818e7a82774c735, type: 3}
+  gemMaterial: {fileID: 2100000, guid: ebf6ad5278eebb24f950d8a95476eb30, type: 2}
+  purple: {r: 0.5137255, g: 0.21960784, b: 0.9254902, a: 1}
+  pink: {r: 0.94509804, g: 0.35686275, b: 0.70980394, a: 1}
+  yellow: {r: 0.99607843, g: 0.89411765, b: 0.2509804, a: 1}
+  blue: {r: 0, g: 0.73333335, b: 0.9764706, a: 1}
+  green: {r: 0, g: 0.9607843, b: 0.83137256, a: 1}
+  gemCreationAlphaValue: 0.45
+  alpha: 20
+  dissolveAnimationTime: 0.6
+  minDissolveValue: 0
+  maxDissolveValue: 1.2
+  dissolveCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  gem: {fileID: 8322878057699688472, guid: 3e3c8f323b83f7040aff7179202bd62b, type: 3}
